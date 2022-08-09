@@ -1,0 +1,2 @@
+0.891 ± 0.000   nhidden 64,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 1,epochs 2000,lr 0.001
+0.888 ± 0.000   nhidden 64,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 1,epochs 2000,lr 0.001

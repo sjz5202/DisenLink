@@ -1,0 +1,5 @@
+0.987 ± 0.000   beta 0.5,temperature 1,nfactor 3,nhidden 256,nembed 32,layer 1,dataset crocodile,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,m 5
+0.988 ± 0.000   beta 0.6,temperature 1,nfactor 3,nhidden 256,nembed 32,layer 1,dataset crocodile,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,m 5
+0.988 ± 0.000   beta 0.7,temperature 1,nfactor 3,nhidden 256,nembed 32,layer 1,dataset crocodile,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,m 5
+0.988 ± 0.000   beta 0.8,temperature 1,nfactor 3,nhidden 256,nembed 32,layer 1,dataset crocodile,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,m 5
+0.986 ± 0.000   beta 0.9,temperature 1,nfactor 3,nhidden 256,nembed 32,layer 1,dataset crocodile,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,m 5

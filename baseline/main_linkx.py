@@ -204,7 +204,7 @@ if args.dataset in ["crocodile", "squirrel",'chameleon']:
         data1 = dataset1[0].to(device)
     data = dataset[0].to(device)
 #nfeat=data.x.shape[1]
-if args.dataset in ["squirrel",'chameleon']:
+if args.dataset in ['squirrel','chameleon']:
     nfeat = args.nfeat
     x = data1.x
     x=(x-torch.mul(torch.ones(x.shape).to(device),torch.mean(x,dim=1).unsqueeze(dim=1)))/torch.std(x,dim=1).unsqueeze(dim=1)

@@ -1,0 +1,3 @@
+0.966 ± 0.000   nhidden 64,nembed 32,layer 1,dataset cora,sub_dataset RU,run 1,epochs 2000,lr 0.001
+0.968 ± 0.004   nhidden 64,nembed 32,layer 1,dataset cora,sub_dataset 0,run 5,epochs 2000,lr 0.001
+0.966 ± 0.002   nhidden 64,nembed 32,layer 1,dataset cora,sub_dataset 0,run 5,epochs 2000,lr 0.001

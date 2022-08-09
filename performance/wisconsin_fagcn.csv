@@ -1,0 +1,1 @@
+0.737 ± 0.049   [0.64985207 0.71789941 0.77696006 0.77204142 0.76849112],nhidden 512,nembed 32,layer 1,dataset wisconsin,sub_dataset JohnsHopkins55,run 5,epochs 2000,heads 5,m 5,lr 0.001

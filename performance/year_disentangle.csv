@@ -1,0 +1,103 @@
+0.946 ± 0.000,[0.94584639],beta 0.6,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 1,epochs 2000,lr 0.001,miniid 0,m 5
+0.947 ± 0.000,[0.94664322],beta 0.6,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 1,epochs 2000,lr 0.001,miniid 0,m 5
+0.951 ± 0.000,[0.95084587],beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 1,epochs 2000,lr 0.001,miniid 0,m 5
+0.925 ± 0.000,[0.92481669 ,0.92466566,],beta 0.1,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 0,m 5
+0.939 ± 0.004,[0.93449456 ,0.94253519,],beta 0.2,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 0,m 5
+0.946 ± 0.001,[0.94679794 ,0.94530074,],beta 0.3,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 0,m 5
+0.949 ± 0.002,[0.95098315 ,0.94695894,]beta 0.4,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 0,m 5
+0.947 ± 0.000,[0.94768635 ,0.94714204,],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 0,m 5
+0.951 ± 0.003,[0.95400735 ,0.94866948,],beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 0,m 5
+0.954 ± 0.001,[0.95580733 ,0.95299492,],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 0,m 5
+0.951 ± 0.001,[0.9525376  ,0.95010762,],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 0,m 5
+0.950 ± 0.000,[0.95074519 ,0.94994842,],beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 0,m 5
+0.920 ± 0.002,[0.92251816 ,0.91839584,],beta 0.1,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 1,m 5
+0.932 ± 0.000,[0.93213599 ,0.9326613 ,],beta 0.2,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 1,m 5
+0.942 ± 0.001,[0.94133351 ,0.9430308 ,],beta 0.3,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 1,m 5
+0.950 ± 0.001,[0.94930629 ,0.95061032,],beta 0.4,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 1,m 5
+0.952 ± 0.000,[0.95196695 ,0.95126287,],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 1,m 5
+0.952 ± 0.004,[0.94814155 ,0.95535479,],beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 1,m 5
+0.950 ± 0.003,[0.94703253 ,0.95243919,],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 1,m 5
+0.954 ± 0.002,[0.95168563 ,0.9561981 ,],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 1,m 5
+0.949 ± 0.002,[0.95067316 ,0.94726302,],beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 1,m 5
+0.925 ± 0.004,[0.92087471 ,0.92863751,],beta 0.1,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 2,m 5
+0.940 ± 0.000,[0.94075555 ,0.93995966,],beta 0.2,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 2,m 5
+0.945 ± 0.003,[0.94225297 ,0.94836271,],beta 0.3,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 2,m 5
+0.949 ± 0.002,[0.94649219 ,0.95116722,],beta 0.4,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 2,m 5
+0.953 ± 0.001,[0.95224806 ,0.95335583,],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 2,m 5
+0.952 ± 0.001,[0.95039359 ,0.95307678,],beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 2,m 5
+0.953 ± 0.002,[0.95153252 ,0.95468312,],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 2,m 5
+0.954 ± 0.003,[0.95039576 ,0.95726228,],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 2,m 5
+0.954 ± 0.000,[0.95392786 ,0.95338469,],beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 2,m 5
+0.924 ± 0.002,[0.92252249 ,0.92606147,],beta 0.1,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 3,m 5
+0.934 ± 0.003,[0.93081444 ,0.9373543 ,],beta 0.2,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 3,m 5
+0.942 ± 0.001,[0.9403968  ,0.94275796,],beta 0.3,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 3,m 5
+0.946 ± 0.000,[0.94598638 ,0.94652601,],beta 0.4,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 3,m 5
+0.944 ± 0.000,[0.94403524 ,0.94415584,],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 3,m 5
+0.946 ± 0.001,[0.94546222 ,0.94707426,],beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 3,m 5
+0.955 ± 0.002,[0.95286835 ,0.9563563 ,],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 3,m 5
+0.948 ± 0.001,[0.94698598 ,0.94936703,],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 3,m 5
+0.949 ± 0.000,[0.94921849 ,0.94886869,],beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 3,m 5
+0.927 ± 0.001,[0.92612173 ,0.92829217,],beta 0.1,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 4,m 5
+0.937 ± 0.001,[0.93628588 ,0.93813415,],beta 0.2,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 4,m 5
+0.944 ± 0.003,[0.94732801 ,0.94106998,],beta 0.3,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 4,m 5
+0.946 ± 0.003,[0.94884637 ,0.94265754,],beta 0.4,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 4,m 5
+0.954 ± 0.003,[0.95089665 ,0.95683575,],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 4,m 5
+0.949 ± 0.001,[0.94945485 ,0.94837385,],beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 4,m 5
+0.954 ± 0.004,[0.95741448 ,0.94968092,],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 4,m 5
+0.953 ± 0.000,[0.95320512 ,0.95261329,],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 4,m 5
+0.953 ± 0.002,[0.95542001 ,0.95110981,],beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 4,m 5
+0.928 ± 0.001,[0.92675788 ,0.92835398,],beta 0.1,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 5,m 5
+0.934 ± 0.000,[0.93404828 ,0.93439918,],beta 0.2,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 5,m 5
+0.943 ± 0.002,[0.94151606 ,0.94527521,],beta 0.3,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 5,m 5
+0.945 ± 0.003,[0.94783018 ,0.94185658,],beta 0.4,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 5,m 5
+0.947 ± 0.002,[0.94915695 ,0.9441764 ,],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 5,m 5
+0.949 ± 0.000,[0.94936519 ,0.94901455,],beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 5,m 5
+0.951 ± 0.004,[0.95569539 ,0.94686327,],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 5,m 5
+0.951 ± 0.004,[0.95440243 ,0.94719231,],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 5,m 5
+0.950 ± 0.001,[0.94942976 ,0.95155649,],beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 5,m 5
+0.928 ± 0.004,[0.93200337 ,0.92351377,],beta 0.1,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 6,m 5
+0.938 ± 0.003,[0.93444729 ,0.94074744,],beta 0.2,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 6,m 5
+0.943 ± 0.002,[0.94035697 ,0.94532132,],beta 0.3,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 6,m 5
+0.950 ± 0.003,[0.9524948  ,0.94702538,],beta 0.4,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 6,m 5
+0.949 ± 0.001,[0.95012658 ,0.94874249,],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 6,m 5
+0.953 ± 0.003,[0.95029606 ,0.95553836,],beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 6,m 5
+0.951 ± 0.002,[0.95285476 ,0.94967124,],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 6,m 5
+0.949 ± 0.004,[0.94506016 ,0.95349514,],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 6,m 5
+0.947 ± 0.002,[0.94511971 ,0.94937861,,],beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 6,m 5
+0.929 ± 0.001,[0.92789677 ,0.93058895,],beta 0.1,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 7,m 5
+0.943 ± 0.003,[0.94659252 ,0.94026844,],beta 0.2,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 7,m 5
+0.944 ± 0.000,[0.94373726 ,0.94337238,],beta 0.3,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 7,m 5
+0.947 ± 0.000,[0.94664173 ,0.94650505,],beta 0.4,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 7,m 5
+0.952 ± 0.003,[0.95445486 ,0.94856906,],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 7,m 5
+0.950 ± 0.004,[0.94616145 ,0.95378201,],beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 7,m 5
+0.954 ± 0.001,[0.95487653 ,0.95372552,],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 7,m 5
+0.954 ± 0.000,[0.95420548 ,0.95425254,],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 7,m 5
+0.950 ± 0.000,[0.94967977 ,0.94983174,],beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 7,m 5
+0.921 ± 0.000,[0.92099463 ,0.92190892,],beta 0.1,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 8,m 5
+0.930 ± 0.002,[0.92796524 ,0.93257877,],beta 0.2,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 8,m 5
+0.941 ± 0.001,[0.94031235 ,0.94151563,],beta 0.3,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 8,m 5
+0.941 ± 0.000,[0.94098675 ,0.94047441,],beta 0.4,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 8,m 5
+0.945 ± 0.002,[0.94326833 ,0.94703921,],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 8,m 5
+0.950 ± 0.002,[0.94785134 ,0.95178235,],beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 8,m 5
+0.950 ± 0.002,[0.95119097 ,0.94799103,],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 8,m 5
+0.947 ± 0.003,[0.94417978 ,0.95007004,],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 8,m 5
+0.948 ± 0.001,[0.94693411 ,0.94848325,],beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 8,m 5
+0.919 ± 0.000,[0.91867971 ,0.91964895,],beta 0.1,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 9,m 5
+0.935 ± 0.000,[0.93483896 ,0.93431225,],beta 0.2,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 9,m 5
+0.941 ± 0.006,[0.94653013 ,0.93462106,],beta 0.3,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 9,m 5
+0.946 ± 0.001,[0.94460509 ,0.94695661,],beta 0.4,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 9,m 5
+0.945 ± 0.000,[0.94471548 ,0.94447325,],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 9,m 5
+0.947 ± 0.002,[0.94903859 ,0.94492314,],beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 9,m 5
+0.951 ± 0.002,[0.94937818 ,0.95338415,],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 9,m 5
+0.948 ± 0.002,[0.94647808 ,0.94997944,],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 9,m 5
+0.950 ± 0.001,[0.94902343 ,0.95197244,],beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 2,epochs 2000,lr 0.001,miniid 9,m 5
+0.951 ± 0.002,[0.94700513 0.95186404 0.95191366 0.95115915 0.95364978],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 5,epochs 2000,lr 0.001,miniid 0,m 5
+0.947 ± 0.004,[0.93959499 0.95055467 0.94893564 0.94988728 0.94807135],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 5,epochs 2000,lr 0.001,miniid 1,m 5
+0.950 ± 0.002,[0.9508675  0.94817308 0.95448201 0.94771649 0.95110928],beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 5,epochs 2000,lr 0.001,miniid 2,m 5
+0.952 ± 0.001,[0.9512819  0.95250952 0.95231363 0.95362348 0.95091611],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 5,epochs 2000,lr 0.001,miniid 3,m 5
+0.951 ± 0.002,[0.95258781 0.95121928 0.94809231 0.950257   0.95245152],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 5,epochs 2000,lr 0.001,miniid 4,m 5
+0.951 ± 0.003,[0.94907288 0.94855239 0.94873934 0.95725937 0.95159145],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 5,epochs 2000,lr 0.001,miniid 5,m 5
+0.947 ± 0.002,[0.94965386 0.94275351 0.94876613 0.94608159 0.94792134],beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 5,epochs 2000,lr 0.001,miniid 6,m 5
+0.952 ± 0.003,[0.95099126 0.95639122 0.95387212 0.94700026 0.95385558],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 5,epochs 2000,lr 0.001,miniid 7,m 5
+0.949 ± 0.002,[0.9515348  0.95093998 0.94473791 0.95088583 0.94937995],beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 5,epochs 2000,lr 0.001,miniid 8,m 5
+0.949 ± 0.003,[0.94446263 0.95338748 0.94559041 0.94885952 0.95201841],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset TW,run 5,epochs 2000,lr 0.001,miniid 9,m 5

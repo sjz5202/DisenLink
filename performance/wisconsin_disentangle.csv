@@ -1,0 +1,38 @@
+0.865 ± 0.027,[0.86565277 0.82445165 0.87464822 0.85431929 0.90729783],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 5,epochs 2000,lr 0.0001,miniid 2,m 5
+0.844 ± 0.034,[0.78404792 0.84534583 0.86275856 0.84280936 0.88681319],beta 0.7,temperature 1,nfactor 5,nhidden 512,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 5,epochs 2000,lr 0.0001,miniid 2,m 5
+0.854 ± 0.027,[0.82142857 0.90404482 0.84615385 0.85076287 0.84530087],beta 0.7,temperature 1,nfactor 5,nhidden 512,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 5,epochs 2000,lr 0.0001,miniid 2,m 5
+0.815 ± 0.027,[0.77494594 0.859      0.81990105 0.81864548 0.80263361],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 5,epochs 2000,lr 0.0001,miniid 2,m 5
+0.784 ± 0.045,[0.76364507 0.81376923 0.80077531 0.83276099 0.81678248 0.80663265
+ 0.80837912 0.75824176 0.76833061 0.66815197],beta 0.1,temperature 1,nfactor 5,nhidden 512,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.790 ± 0.050,[0.79501931 0.69693878 0.80824176 0.79984225 0.71865228 0.85800273
+ 0.84683494 0.78012562 0.76715916 0.83395872],beta 0.2,temperature 1,nfactor 5,nhidden 512,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.809 ± 0.034,[0.85008183 0.75782467 0.78247163 0.84749921 0.84134615 0.77150276
+ 0.8034188  0.84530087 0.81507974 0.7737725 ],beta 0.3,temperature 1,nfactor 5,nhidden 512,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.811 ± 0.037,[0.86457692 0.79415228 0.75715291 0.81673761 0.81629341 0.79161538
+ 0.77805149 0.8253012  0.88293781 0.78254438],beta 0.4,temperature 1,nfactor 5,nhidden 512,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.809 ± 0.038,[0.86721426 0.77505586 0.86116803 0.80407692 0.83481571 0.74927583
+ 0.76185897 0.78903616 0.813494   0.83079964],beta 0.5,temperature 1,nfactor 5,nhidden 512,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.836 ± 0.038,[0.83175039 0.88273828 0.76745314 0.849891   0.85828656 0.79103083
+ 0.78615702 0.87378831 0.86322606 0.85368716],beta 0.6,temperature 1,nfactor 5,nhidden 512,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.844 ± 0.025,[0.85850532 0.80209647 0.82366562 0.84040141 0.86981011 0.86353695
+ 0.87396568 0.8593245  0.80584165 0.84379751],beta 0.7,temperature 1,nfactor 5,nhidden 512,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.833 ± 0.033,[0.86806431 0.79702585 0.86665669 0.83621928 0.77466205 0.83684864
+ 0.86227258 0.81651955 0.79811666 0.8712651 ],beta 0.8,temperature 1,nfactor 5,nhidden 512,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.828 ± 0.038,[0.84741488 0.83176923 0.81878407 0.81389578 0.83270827 0.79974571
+ 0.85991379 0.89349707 0.83922919 0.73923993],beta 0.9,temperature 1,nfactor 5,nhidden 512,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.789 ± 0.023,[0.79866562 0.80628518 0.79260935 0.79108392 0.80749282 0.8135174
+ 0.78948882 0.78015548 0.72889123 0.77981155],beta 0.1,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.807 ± 0.036,[0.80435794 0.77979975 0.86420722 0.80460889 0.85376766 0.82045046
+ 0.84462504 0.75671918 0.78246186 0.76067471],beta 0.2,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.802 ± 0.044,[0.86734615 0.75109542 0.78738875 0.83542423 0.82126697 0.79288703
+ 0.82574491 0.71036585 0.8395308  0.78829857],beta 0.3,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.837 ± 0.021,[0.83375614 0.8416514  0.84783142 0.884654   0.82660256 0.8440618
+ 0.84488762 0.83321749 0.79815324 0.81949127],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.838 ± 0.034,[0.89000938 0.90171371 0.83317887 0.83317506 0.82878535 0.83021759
+ 0.8015873  0.80436547 0.86249218 0.79676381],beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.843 ± 0.041,[0.87765385 0.86681063 0.86219262 0.87056515 0.80656109 0.87922433
+ 0.76851558 0.81129808 0.89363966 0.79589528],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.840 ± 0.023,[0.82692308 0.86929206 0.84723509 0.83557692 0.8150314  0.8293365
+ 0.82730616 0.85971912 0.88293651 0.80836839],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5
+0.844 ± 0.019,[0.84457157 0.83833895 0.84734093 0.87021131 0.84630647 0.83887306
+ 0.85496476 0.82700388 0.87006689 0.80201233],beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset wisconsin,sub_dataset ES,run 10,epochs 2000,lr 0.0001,miniid 2,m 5

@@ -1,0 +1,1 @@
+0.966 ± 0.003   nhidden 64,nembed 32,layer 1,dataset cora,sub_dataset cora,run 5,epochs 2000,lr 0.01

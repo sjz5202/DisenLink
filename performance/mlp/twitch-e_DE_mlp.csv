@@ -1,0 +1,11 @@
+0.857 ± 0.003   [0.85236171 0.86052703 0.86010713 0.85592028],nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 4,epochs 2000,lr 0.001
+0.861 ± 0.003   [0.86413294 0.85965322 0.85735852 0.86276668],nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 4,epochs 2000,lr 0.005
+0.856 ± 0.007   [0.8567133  0.86519052 0.84481889 0.85756637],nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 4,epochs 2000,lr 0.01
+0.867 ± 0.004   [0.86905296 0.87012191 0.8611814  0.86872518],nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 4,epochs 2000,lr 0.001
+0.872 ± 0.006   [0.87807359 0.87797387 0.86291624 0.87003978],nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 4,epochs 2000,lr 0.005
+0.877 ± 0.003   [0.87865578 0.87475387 0.88161117 0.87315859],nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 4,epochs 2000,lr 0.01
+0.875 ± 0.005   [0.87831152 0.86860535 0.87169286 0.87993848],nhidden 512,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 4,epochs 2000,lr 0.001
+0.885 ± 0.005   [0.88926402 0.89066159 0.88215909 0.8796674 ],nhidden 512,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 4,epochs 2000,lr 0.005
+0.875 ± 0.003   [0.87080845 0.8742941  0.87784292 0.87841251],nhidden 512,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 4,epochs 2000,lr 0.01
+
+0.885 ± 0.005   [0.88926402 0.89066159 0.88215909 0.8796674 ],nhidden 512,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 4,epochs 2000,lr 0.005

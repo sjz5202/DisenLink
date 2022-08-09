@@ -1,0 +1,104 @@
+
+0.916 ± 0.001   beta 0.85,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 3,epochs 2000,lr 0.001,m 5
+0.896 ± 0.002   beta 1.0,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 3,epochs 2000,lr 0.001,m 5
+0.883 ± 0.000   beta 1.0,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 1,epochs 2000,lr 0.001,m 5
+0.903 ± 0.000   beta 1.0,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 1,epochs 2000,lr 0.001,m 5
+0.886 ± 0.003   beta 0.5,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 3,epochs 2000,lr 0.001,m 5
+0.894 ± 0.003   beta 0.6,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 3,epochs 2000,lr 0.001,m 5
+0.891 ± 0.003   beta 0.7,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 3,epochs 2000,lr 0.001,m 5
+0.892 ± 0.003   beta 0.8,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 3,epochs 2000,lr 0.001,m 5
+0.895 ± 0.002   beta 0.85,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 3,epochs 2000,lr 0.001,m 5
+0.895 ± 0.003   beta 0.9,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 3,epochs 2000,lr 0.001,m 5
+0.900 ± 0.000   beta 1.0,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 2,epochs 2000,lr 0.001,m 5
+0.877 ± 0.000   beta 0.5,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 2,epochs 2000,lr 0.001,m 5
+0.877 ± 0.002   beta 0.6,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 2,epochs 2000,lr 0.001,m 5
+0.880 ± 0.002   beta 0.7,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 2,epochs 2000,lr 0.001,m 5
+0.880 ± 0.001   beta 0.8,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 2,epochs 2000,lr 0.001,m 5
+0.884 ± 0.003   beta 0.85,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 2,epochs 2000,lr 0.001,m 5
+0.884 ± 0.002   beta 0.9,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 2,epochs 2000,lr 0.001,m 5
+0.887 ± 0.000   beta 1.0,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 1,epochs 2000,lr 0.001,m 5
+0.947 ± 0.000   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.001,m 5
+0.946 ± 0.000   beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.001,m 5
+0.948 ± 0.000   beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 3,epochs 2000,lr 0.0001,m 5
+0.949 ± 0.001   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 3,epochs 2000,lr 0.0001,m 5
+0.948 ± 0.001   beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 3,epochs 2000,lr 0.0001,m 5
+0.949 ± 0.000   beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 3,epochs 2000,lr 0.0001,m 5
+0.951 ± 0.002   beta 0.85,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 3,epochs 2000,lr 0.0001,m 5
+0.949 ± 0.000   beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 3,epochs 2000,lr 0.0001,m 5
+0.947 ± 0.002   beta 1.0,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 3,epochs 2000,lr 0.0001,m 5
+0.947 ± 0.000   beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ES,run 3,epochs 2000,lr 0.0001,m 5
+0.946 ± 0.001   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ES,run 3,epochs 2000,lr 0.0001,m 5
+0.947 ± 0.002   beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ES,run 3,epochs 2000,lr 0.0001,m 5
+0.948 ± 0.002   beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ES,run 3,epochs 2000,lr 0.0001,m 5
+0.946 ± 0.001   beta 0.85,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ES,run 3,epochs 2000,lr 0.0001,m 5
+0.945 ± 0.001   beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ES,run 3,epochs 2000,lr 0.0001,m 5
+0.940 ± 0.001   beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset FR,run 3,epochs 2000,lr 0.0001,m 5
+0.940 ± 0.001   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset FR,run 3,epochs 2000,lr 0.0001,m 5
+0.941 ± 0.001   beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset FR,run 3,epochs 2000,lr 0.0001,m 5
+0.940 ± 0.001   beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset FR,run 3,epochs 2000,lr 0.0001,m 5
+0.941 ± 0.000   beta 0.85,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset FR,run 3,epochs 2000,lr 0.0001,m 5
+0.939 ± 0.001   beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset FR,run 3,epochs 2000,lr 0.0001,m 5
+0.943 ± 0.002   beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 3,epochs 2000,lr 0.0001,m 5
+0.945 ± 0.001   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 3,epochs 2000,lr 0.0001,m 5
+0.944 ± 0.001   beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 3,epochs 2000,lr 0.0001,m 5
+0.943 ± 0.003   beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 3,epochs 2000,lr 0.0001,m 5
+0.943 ± 0.002   beta 0.85,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 3,epochs 2000,lr 0.0001,m 5
+0.945 ± 0.001   beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 3,epochs 2000,lr 0.0001,m 5
+0.942 ± 0.001   beta 1.0,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 3,epochs 2000,lr 0.0001,m 5
+0.943 ± 0.001   beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 3,epochs 2000,lr 0.0001,m 5
+0.939 ± 0.002   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 3,epochs 2000,lr 0.0001,m 5
+0.942 ± 0.002   beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 3,epochs 2000,lr 0.0001,m 5
+0.939 ± 0.002   beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 3,epochs 2000,lr 0.0001,m 5
+0.942 ± 0.000   beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 3,epochs 2000,lr 0.0001,m 5
+0.942 ± 0.000   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 3,epochs 2000,lr 0.0001,m 5
+0.941 ± 0.000   beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 3,epochs 2000,lr 0.0001,m 5
+
+0.949 ± 0.001   beta 0.85,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 10,epochs 2000,lr 0.0001,m 5
+0.947 ± 0.001   beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ES,run 10,epochs 2000,lr 0.0001,m 5
+0.941 ± 0.001   beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset FR,run 10,epochs 2000,lr 0.0001,m 5
+0.943 ± 0.002   beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 10,epochs 2000,lr 0.0001,m 5
+0.946 ± 0.002   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 10,epochs 2000,lr 0.0001,m 5
+0.942 ± 0.001   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 10,epochs 2000,lr 0.0001,m 5
+
+0.949 ± 0.000   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 1,epochs 2000,lr 0.0001,m 5
+0.951 ± 0.000   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 1,epochs 2000,lr 0.0001,m 5
+0.954 ± 0.000   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 1,epochs 2000,lr 0.0001,m 5
+0.944 ± 0.000   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 1,epochs 2000,lr 0.0001,m 5
+0.956 ± 0.000   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 1,epochs 2000,lr 0.0001,m 5
+0.956 ± 0.006   beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ES,run 5,epochs 2000,lr 0.0001,m 5
+0.950 ± 0.001   beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 5,epochs 2000,lr 0.0001,m 5
+0.954 ± 0.002   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 5,epochs 2000,lr 0.0001,m 5
+0.950 ± 0.002   beta 0.6,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 5,epochs 2000,lr 0.0001,m 5
+0.960 ± 0.000,[0.96045657],beta 0.85,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,m 5
+0.952 ± 0.000,[0.95202298],beta 0.7,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset FR,run 1,epochs 2000,lr 0.0001,m 5
+0.960 ± 0.000,[0.95976189],beta 0.85,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,m 5
+0.951 ± 0.002,[0.95209675 0.9516032  0.94885638 0.95207987 0.94862451],beta 0.6,temperature 1,nfactor 7,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 5,epochs 2000,lr 0.0001,miniid 0,m 5
+0.951 ± 0.001,[0.94952156 0.95105947 0.94967534 0.95302602 0.95056948],beta 0.6,temperature 1,nfactor 8,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 5,epochs 2000,lr 0.0001,miniid 0,m 5
+0.951 ± 0.001,[0.95204986 0.95137137 0.95199759 0.94888711 0.95136753],beta 0.6,temperature 1,nfactor 9,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 5,epochs 2000,lr 0.0001,miniid 0,m 5
+0.951 ± 0.002,[0.95257072 0.95215676 0.95152363 0.94614759 0.95101648],beta 0.6,temperature 1,nfactor 10,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 5,epochs 2000,lr 0.0001,miniid 0,m 5
+0.931 ± 0.000,[0.93092315],beta 0.2,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.951 ± 0.002,[0.95054172 0.95297116 0.94847228],beta 0.85,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 3,epochs 2000,lr 0.0001,miniid 2,m 5
+0.958 ± 0.004,[0.96206317 0.95279791 0.95825792],beta 0.85,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 3,epochs 2000,lr 0.0001,miniid 2,m 5
+0.956 ± 0.000,[0.95593117],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.927 ± 0.000,[0.92689766],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.923 ± 0.000,[0.92324098],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.929 ± 0.000,[0.92936734],beta 0.8,temperature 1,nfactor 5,nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.960 ± 0.000,[0.96009354],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.947 ± 0.000,[0.94650827],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.936 ± 0.000,[0.93579066],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.939 ± 0.000,[0.93925551],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.948 ± 0.000,[0.94766496],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.944 ± 0.000,[0.94406819],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.948 ± 0.000,[0.94834184],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.932 ± 0.000,[0.93183005],beta 0.5,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.963 ± 0.000,[0.96276875],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.948 ± 0.000,[0.94796525],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.946 ± 0.000,[0.94619],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.961 ± 0.000,[0.96105426],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.958 ± 0.000,[0.95823716],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.924 ± 0.000,[0.9244496],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.956 ± 0.000,[0.95554784],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.960 ± 0.000,[0.95952371],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.936 ± 0.000,[0.93598686],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 1,epochs 2000,lr 0.0001,miniid 2,m 5
+0.958 ± 0.001,[0.95979918 0.95722755 0.95943468 0.95671715 0.95720404],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 5,epochs 2000,lr 0.0001,miniid 2,m 5
+0.949 ± 0.001,[0.94805529 0.95001996 0.94906465 0.94744104 0.9501231 ],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 5,epochs 2000,lr 0.0001,miniid 2,m 5

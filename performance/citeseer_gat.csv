@@ -1,0 +1,3 @@
+0.983 ± 0.000   nhidden 128,nembed 32,layer 1,dataset citeseer,sub_dataset fb100,run 2,epochs 2000,heads 5,m 5,lr 0.01
+0.979 ± 0.002   nhidden 256,nembed 32,layer 1,dataset citeseer,sub_dataset fb100,run 2,epochs 2000,heads 5,m 5,lr 0.01
+0.983 ± 0.002   nhidden 128,nembed 32,layer 1,dataset citeseer,sub_dataset fb100,run 5,epochs 2000,heads 5,m 5,lr 0.01

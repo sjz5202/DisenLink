@@ -1,0 +1,6 @@
+0.965 ± 0.002   beta 1.0,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset chameleon,sub_dataset Reed98,run 10,epochs 2000,lr 0.001,loss_weight 20 
+0.974 ± 0.000   beta 0.85,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset chameleon,sub_dataset Reed98,run 1,epochs 2000,lr 0.001,loss_weight 20 
+0.976 ± 0.000   beta 0.85,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset chameleon,sub_dataset Reed98,run 1,epochs 2000,lr 0.001,loss_weight 20 
+0.977 ± 0.000   beta 0.85,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset chameleon,sub_dataset Reed98,run 1,epochs 2000,lr 0.001,loss_weight 20 
+0.976 ± 0.000   beta 0.85,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset chameleon,sub_dataset Reed98,run 1,epochs 2000,lr 0.001,loss_weight 20 
+0.975 ± 0.000   nhidden 64,nembed 32,layer 1,dataset chameleon,sub_dataset Reed98,run 1,epochs 2000,lr 0.001

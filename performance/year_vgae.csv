@@ -1,0 +1,20 @@
+0.914 ± 0.002   [0.9126281  0.9130276  0.91269195 0.91788121 0.9156273 ],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.914 ± 0.005   [0.92194621 0.90812763 0.91509122 0.91099383 0.91453189],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.918 ± 0.004   [0.91353844 0.91548341 0.91678856 0.92118569 0.92353832],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.915 ± 0.007   [0.92160981 0.92007265 0.92038403 0.90289928 0.91146847],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.921 ± 0.003   [0.91545369 0.92431786 0.92175904 0.9200879  0.92286795],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.911 ± 0.005   [0.91899023 0.91045534 0.90580433 0.91379638 0.9072792 ],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.916 ± 0.005   [0.91132112 0.92090034 0.92239185 0.91192234 0.91363907],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.920 ± 0.004   [0.9156453  0.92384116 0.92149293 0.91533404 0.92352829],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.910 ± 0.005   [0.91135778 0.91508747 0.91232742 0.90014969 0.91075495],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.911 ± 0.004   [0.91031036 0.91150386 0.91100326 0.9063763  0.91764493],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.926 ± 0.002   [0.92583492 0.92611734 0.92417981 0.9293128  0.92218418],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.924 ± 0.003   [0.92349711 0.92335814 0.92584127 0.92829723 0.92054449],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.925 ± 0.005   [0.93141703 0.9174405  0.92819652 0.92708201 0.92331566],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.923 ± 0.005   [0.92145007 0.92771452 0.92082943 0.92954408 0.91534627],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.927 ± 0.005   [0.9188608  0.92688108 0.92761292 0.9325255  0.92942869],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.923 ± 0.006   [0.91454964 0.92689696 0.92859784 0.92837123 0.91905314],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.924 ± 0.002   [0.92357159 0.91982838 0.9270158  0.92590034 0.92393901],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.930 ± 0.003   [0.93292723 0.93438828 0.92526227 0.92811523 0.92841377],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.922 ± 0.002   [0.92224043 0.92140799 0.92299105 0.9250004  0.91803202],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001
+0.926 ± 0.005   [0.92559471 0.91855006 0.93201883 0.92264258 0.92901282],nhidden 64,nembed 32,layer 1,dataset year,sub_dataset RU,run 5,epochs 2000,lr 0.001

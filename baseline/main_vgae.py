@@ -131,7 +131,7 @@ if args.dataset in ["texas", "wisconsin","cornell"]:
 if args.dataset in ["squirrel",'chameleon']:
     nfeat = args.nfeat
     x = data1.x
-    x=(x-torch.mul(torch.ones(x.shape).to(device),torch.mean(x,dim=1).unsqueeze(dim=1)))/torch.std(x,dim=1).unsqueeze(dim=1)
+    #x=(x-torch.mul(torch.ones(x.shape).to(device),torch.mean(x,dim=1).unsqueeze(dim=1)))/torch.std(x,dim=1).unsqueeze(dim=1)
     edge_index=data1.edge_index
 if args.dataset in ['crocodile']:
     nfeat=data.x.shape[1]

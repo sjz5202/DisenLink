@@ -1,0 +1,8 @@
+0.822 ± 0.008   nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ENGB,run 10,epochs 2000,lr 0.001
+0.828 ± 0.007   nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset ES,run 10,epochs 2000,lr 0.001
+0.754 ± 0.007   nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset FR,run 10,epochs 2000,lr 0.001
+0.777 ± 0.010   nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset PTBR,run 10,epochs 2000,lr 0.001
+0.795 ± 0.014   nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset RU,run 10,epochs 2000,lr 0.001
+0.771 ± 0.003   nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 10,epochs 2000,lr 0.001
+0.809 ± 0.011   [0.81486195 0.81553218 0.81544481 0.81194638 0.80815946 0.77697475
+ 0.81630979 0.81459277 0.81549894 0.80525991],nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 10,epochs 2000,lr 0.001

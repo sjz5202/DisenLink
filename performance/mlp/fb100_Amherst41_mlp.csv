@@ -1,0 +1,11 @@
+0.912 ± 0.000   [0.91142896 0.91186344 0.91180048 0.91102068],nhidden 128,nembed 32,layer 1,dataset fb100,sub_dataset Amherst41,run 4,epochs 2000,lr 0.001
+0.919 ± 0.001   [0.91964292 0.91924241 0.91934762 0.91800007],nhidden 128,nembed 32,layer 1,dataset fb100,sub_dataset Amherst41,run 4,epochs 2000,lr 0.005
+0.918 ± 0.001   [0.91880624 0.91719744 0.91650485 0.91945898],nhidden 128,nembed 32,layer 1,dataset fb100,sub_dataset Amherst41,run 4,epochs 2000,lr 0.01
+0.921 ± 0.001   [0.92054478 0.92223039 0.92205467 0.92032807],nhidden 256,nembed 32,layer 1,dataset fb100,sub_dataset Amherst41,run 4,epochs 2000,lr 0.001
+0.926 ± 0.001   [0.92493951 0.92767808 0.9251415  0.92709351],nhidden 256,nembed 32,layer 1,dataset fb100,sub_dataset Amherst41,run 4,epochs 2000,lr 0.005
+0.925 ± 0.002   [0.92686726 0.92242818 0.92490706 0.92448284],nhidden 256,nembed 32,layer 1,dataset fb100,sub_dataset Amherst41,run 4,epochs 2000,lr 0.01
+0.928 ± 0.001   [0.92547839 0.92932743 0.92782195 0.92834939],nhidden 512,nembed 32,layer 1,dataset fb100,sub_dataset Amherst41,run 4,epochs 2000,lr 0.001
+0.926 ± 0.002   [0.92225404 0.92511851 0.92684708 0.92804338],nhidden 512,nembed 32,layer 1,dataset fb100,sub_dataset Amherst41,run 4,epochs 2000,lr 0.005
+0.928 ± 0.003   [0.93051219 0.92535262 0.92965052 0.92460127],nhidden 512,nembed 32,layer 1,dataset fb100,sub_dataset Amherst41,run 4,epochs 2000,lr 0.01
+
+0.928 ± 0.003   [0.93051219 0.92535262 0.92965052 0.92460127],nhidden 512,nembed 32,layer 1,dataset fb100,sub_dataset Amherst41,run 4,epochs 2000,lr 0.01

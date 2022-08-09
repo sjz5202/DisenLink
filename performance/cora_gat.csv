@@ -1,0 +1,3 @@
+0.971 ± 0.004   nhidden 128,nembed 32,layer 1,dataset cora,sub_dataset fb100,run 2,epochs 2000,heads 5,m 5,lr 0.01
+0.969 ± 0.001   nhidden 256,nembed 32,layer 1,dataset cora,sub_dataset fb100,run 2,epochs 2000,heads 5,m 5,lr 0.01
+0.970 ± 0.002   nhidden 128,nembed 32,layer 1,dataset cora,sub_dataset fb100,run 5,epochs 2000,heads 5,m 5,lr 0.01

@@ -1,0 +1,11 @@
+0.900 ± 0.004   [0.89802455 0.89448847 0.90422101 0.9029556 ],nhidden 128,nembed 32,layer 1,dataset cora,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.001
+0.915 ± 0.003   [0.9106161  0.91445851 0.91919048 0.91681373],nhidden 128,nembed 32,layer 1,dataset cora,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.005
+0.918 ± 0.004   [0.92298572 0.91860786 0.9145706  0.91419952],nhidden 128,nembed 32,layer 1,dataset cora,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.01
+0.911 ± 0.008   [0.9114291  0.91366174 0.92000456 0.89776538],nhidden 256,nembed 32,layer 1,dataset cora,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.001
+0.921 ± 0.005   [0.91577494 0.92930279 0.91823688 0.92011539],nhidden 256,nembed 32,layer 1,dataset cora,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.005
+0.917 ± 0.003   [0.91816864 0.91703622 0.91284068 0.92118343],nhidden 256,nembed 32,layer 1,dataset cora,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.01
+0.919 ± 0.003   [0.91516263 0.92365972 0.91665617 0.92078312],nhidden 512,nembed 32,layer 1,dataset cora,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.001
+0.929 ± 0.002   [0.92930817 0.92588635 0.93162421 0.93055834],nhidden 512,nembed 32,layer 1,dataset cora,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.005
+0.912 ± 0.004   [0.91037156 0.91200858 0.90596358 0.91766708],nhidden 512,nembed 32,layer 1,dataset cora,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.01
+
+0.929 ± 0.002   [0.92930817 0.92588635 0.93162421 0.93055834],nhidden 512,nembed 32,layer 1,dataset cora,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.005

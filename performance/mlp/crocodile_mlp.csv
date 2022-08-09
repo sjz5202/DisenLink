@@ -1,0 +1,11 @@
+0.974 ± 0.000   [0.97429457 0.9748807  0.97400771 0.97434635],nhidden 128,nembed 32,layer 1,dataset crocodile,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.001
+0.971 ± 0.002   [0.97284453 0.97254747 0.96793756 0.97023663],nhidden 128,nembed 32,layer 1,dataset crocodile,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.005
+0.968 ± 0.005   [0.97278067 0.97150178 0.96787768 0.95934334],nhidden 128,nembed 32,layer 1,dataset crocodile,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.01
+0.977 ± 0.000   [0.97787982 0.97735549 0.97752472 0.97707873],nhidden 256,nembed 32,layer 1,dataset crocodile,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.001
+0.975 ± 0.002   [0.97228939 0.97485069 0.97675899 0.97660149],nhidden 256,nembed 32,layer 1,dataset crocodile,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.005
+0.974 ± 0.001   [0.97378155 0.9725847  0.97358631 0.97589712],nhidden 256,nembed 32,layer 1,dataset crocodile,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.01
+0.977 ± 0.002   [0.97786964 0.98079467 0.9763284  0.97437029],nhidden 512,nembed 32,layer 1,dataset crocodile,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.001
+0.973 ± 0.005   [0.96706483 0.97054582 0.97788176 0.97779812],nhidden 512,nembed 32,layer 1,dataset crocodile,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.005
+0.964 ± 0.002   [0.96332007 0.96673294 0.96293989 0.9636013 ],nhidden 512,nembed 32,layer 1,dataset crocodile,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.01
+
+0.977 ± 0.000   [0.97787982 0.97735549 0.97752472 0.97707873],nhidden 256,nembed 32,layer 1,dataset crocodile,sub_dataset JohnsHopkins55,run 4,epochs 2000,lr 0.001

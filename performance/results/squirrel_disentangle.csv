@@ -1,0 +1,3 @@
+0.966 ± 0.000   beta 0.1,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 2000,lr 0.001,loss_weight 20 
+0.968 ± 0.000   beta 0.2,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 2000,lr 0.001,loss_weight 20 
+0.955 ± 0.001   beta 0.9,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 2000,lr 0.001,loss_weight 20 

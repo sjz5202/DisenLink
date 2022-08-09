@@ -1,0 +1,5 @@
+0.866 ± 0.071   [0.91173607 0.90795238 0.72479738 0.8952308  0.88853057],nhidden 256,nembed 32,layer 1,dataset year,sub_dataset fb100,run 5,epochs 2000,heads 5,m 5,miniid 0,lr 0.001
+0.900 ± 0.006   [0.89427781 0.9074114  0.89927777 0.89369529 0.9055585 ],nhidden 256,nembed 32,layer 1,dataset year,sub_dataset fb100,run 5,epochs 2000,heads 5,m 5,miniid 1,lr 0.001
+0.906 ± 0.006   [0.89391779 0.90852335 0.90824472 0.91141915 0.90987206],nhidden 256,nembed 32,layer 1,dataset year,sub_dataset fb100,run 5,epochs 2000,heads 5,m 5,miniid 2,lr 0.001
+0.865 ± 0.073   [0.90705788 0.89409773 0.90741432 0.89795289 0.71978415],nhidden 256,nembed 32,layer 1,dataset year,sub_dataset fb100,run 5,epochs 2000,heads 5,m 5,miniid 3,lr 0.001
+0.863 ± 0.069   [0.91188483 0.91316045 0.73079827 0.90095711 0.85922485],nhidden 256,nembed 32,layer 1,dataset year,sub_dataset fb100,run 5,epochs 2000,heads 5,m 5,miniid 4,lr 0.001

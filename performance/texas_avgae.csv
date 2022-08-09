@@ -1,0 +1,6 @@
+0.645 ± 0.061   [0.55859375 0.68408203 0.69238281],nhidden 256,nembed 32,layer 1,dataset texas,sub_dataset Amherst41,run 3,epochs 2000,lr 0.001
+0.702 ± 0.011   [0.68945312 0.71679688 0.69921875],nhidden 512,nembed 32,layer 1,dataset texas,sub_dataset Amherst41,run 3,epochs 2000,lr 0.001
+0.674 ± 0.061   [0.63769531 0.59570312 0.63476562 0.65429688 0.77050781 0.76660156
+ 0.70800781 0.59472656 0.65429688 0.72558594],nhidden 512,nembed 32,layer 1,dataset texas,sub_dataset Amherst41,run 10,epochs 2000,lr 0.001
+0.672 ± 0.063   [0.73046875 0.71972656 0.54785156 0.73876953 0.66699219 0.73632812
+ 0.66113281 0.57421875 0.65234375 0.68847656],nhidden 1024,nembed 32,layer 1,dataset texas,sub_dataset Amherst41,run 10,epochs 2000,lr 0.001

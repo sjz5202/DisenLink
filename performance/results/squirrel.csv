@@ -1,0 +1,16 @@
+beta 0.85,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 10,lr 0.001,loss_weight 20,0.827 ± 0.009beta 0.1,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 3,lr 0.001,loss_weight 20,0.793 ± 0.009beta 0.2,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 3,lr 0.001,loss_weight 20,0.791 ± 0.005beta 0.1,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 3,lr 0.001,loss_weight 20,  0.793 ± 0.010 /nbeta 0.1,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 3,lr 0.001,loss_weight 20,  0.798 ± 0.012 
+beta 0.2,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 3,lr 0.001,loss_weight 20,  0.799 ± 0.010 
+0.797 ± 0.007   beta 0.1,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 3,lr 0.001,loss_weight 20 
+0.793 ± 0.006   beta 0.2,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 3,lr 0.001,loss_weight 20 
+0.796 ± 0.008   beta 0.1,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 3,lr 0.001,loss_weight 20 
+0.795 ± 0.004   beta 0.2,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 3,lr 0.001,loss_weight 20 
+0.792 ± 0.008   beta 0.3,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 3,lr 0.001,loss_weight 20 
+0.792 ± 0.006   beta 0.4,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 3,lr 0.001,loss_weight 20 
+0.789 ± 0.003   beta 0.5,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 3,lr 0.001,loss_weight 20 
+0.789 ± 0.006   beta 0.6,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 3,lr 0.001,loss_weight 20 
+0.794 ± 0.012   beta 0.1,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 3,lr 0.001,loss_weight 20 
+0.801 ± 0.005   beta 0.1,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 3,lr 0.001,loss_weight 20 
+
+
+0.966 ± 0.000   beta 0.1,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 2000,lr 0.001,loss_weight 20 
+0.969 ± 0.001   beta 0.2,temperature 1,nfactor 5,nhidden 64,nembed 32,layer 1,dataset squirrel,sub_dataset Reed98,run 5,epochs 2000,lr 0.001,loss_weight 20 

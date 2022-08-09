@@ -1,0 +1,2 @@
+0.907 ± 0.001,[0.90588473 0.90859655 0.90635732 0.90502404 0.90805345],beta 0.5,temperature 1,nfactor 1,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 5,epochs 2000,lr 0.0001,miniid 2,m 5
+0.922 ± 0.002,[0.91977776 0.92500951 0.92301275 0.92387406 0.91881834],beta 0.5,temperature 1,nfactor 2,nhidden 256,nembed 32,layer 1,dataset twitch-e,sub_dataset DE,run 5,epochs 2000,lr 0.0001,miniid 2,m 5

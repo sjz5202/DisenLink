@@ -1,0 +1,64 @@
+dataset chameleon,sub_dataset Amherst41,fea_homo 0.013566910289227962
+dataset squirrel,sub_dataset Amherst41,fea_homo 0.015139458701014519
+dataset wisconsin,sub_dataset Amherst41,fea_homo 0.3784341812133789
+dataset texas,sub_dataset Amherst41,fea_homo 0.36277925968170166
+dataset cora,sub_dataset Amherst41,fea_homo 0.16823440790176392
+dataset citeseer,sub_dataset Amherst41,fea_homo 0.189803808927536
+dataset photo,sub_dataset Amherst41,fea_homo 0.4978201985359192
+
+dataset chameleon,sub_dataset Amherst41,fea_homo 0.05545274168252945
+dataset squirrel,sub_dataset Amherst41,fea_homo 0.048749253153800964
+dataset wisconsin,sub_dataset Amherst41,fea_homo 0.14274325966835022
+dataset texas,sub_dataset Amherst41,fea_homo 0.16074635088443756
+dataset cora,sub_dataset Amherst41,fea_homo 0.12686145305633545
+dataset citeseer,sub_dataset Amherst41,fea_homo 0.14035771787166595
+dataset photo,sub_dataset Amherst41,fea_homo 0.2029391974210739
+
+dataset chameleon,sub_dataset Amherst41,fea_homo 3.3659000396728516
+dataset squirrel,sub_dataset Amherst41,fea_homo 3.02775239944458
+dataset wisconsin,sub_dataset Amherst41,fea_homo 0.3932836353778839
+dataset texas,sub_dataset Amherst41,fea_homo 0.4194267690181732
+dataset cora,sub_dataset Amherst41,fea_homo 0.756683349609375
+dataset citeseer,sub_dataset Amherst41,fea_homo 0.7362684607505798
+dataset photo,sub_dataset Amherst41,fea_homo 0.41619473695755005
+
+dataset chameleon,sub_dataset as,fea_homo 0.013566910289227962
+dataset squirrel,sub_dataset as,fea_homo 0.015139458701014519
+dataset crocodile,sub_dataset as,fea_homo 0.16921013593673706
+dataset texas,sub_dataset as,fea_homo 0.36277925968170166
+dataset wisconsin,sub_dataset as,fea_homo 0.3784341812133789
+dataset twitch-e,sub_dataset DE,fea_homo 0.20020528137683868
+dataset twitch-e,sub_dataset ENGB,fea_homo 0.20137932896614075
+dataset fb100,sub_dataset Amherst41,fea_homo 0.34076377749443054
+dataset fb100,sub_dataset JohnsHopkins55,fea_homo 0.31837815046310425
+dataset cora,sub_dataset as,fea_homo 0.16823440790176392
+dataset citeseer,sub_dataset as,fea_homo 0.189803808927536
+dataset photo,sub_dataset as,fea_homo 0.4978201985359192
+
+
+dataset chameleon,sub_dataset as,fea_homo 0.5510367751121521
+dataset squirrel,sub_dataset as,fea_homo 0.6988497376441956
+dataset crocodile,sub_dataset as,fea_homo 0.7394224405288696
+dataset texas,sub_dataset as,fea_homo 0.539326548576355
+dataset wisconsin,sub_dataset as,fea_homo 0.7061185836791992
+dataset twitch-e,sub_dataset DE,fea_homo 0.9161666035652161
+dataset twitch-e,sub_dataset ENGB,fea_homo 0.9598578810691833
+dataset fb100,sub_dataset Amherst41,fea_homo 0.986379086971283
+dataset fb100,sub_dataset JohnsHopkins55,fea_homo 1.003347396850586
+dataset cora,sub_dataset as,fea_homo 0.7561545372009277
+dataset citeseer,sub_dataset as,fea_homo 0.7621850967407227
+dataset photo,sub_dataset as,fea_homo 1.1720399856567383
+
+
+dataset chameleon,sub_dataset as,fea_homo 0.01647486351430416
+dataset squirrel,sub_dataset as,fea_homo 0.0161008071154356
+dataset crocodile,sub_dataset as,fea_homo 0.17777422070503235
+dataset texas,sub_dataset as,fea_homo 0.3832525312900543
+dataset wisconsin,sub_dataset as,fea_homo 0.36295250058174133
+dataset twitch-e,sub_dataset DE,fea_homo 0.19607724249362946
+dataset twitch-e,sub_dataset ENGB,fea_homo 0.2101471871137619
+dataset fb100,sub_dataset Amherst41,fea_homo 0.3348139524459839
+dataset fb100,sub_dataset JohnsHopkins55,fea_homo 0.32045724987983704
+dataset cora,sub_dataset as,fea_homo 0.1676546037197113
+dataset citeseer,sub_dataset as,fea_homo 0.1906338781118393
+dataset photo,sub_dataset as,fea_homo 0.48760637640953064

@@ -1,0 +1,6 @@
+0.684 ± 0.060   [0.69179687 0.5671875  0.72050781 0.73408203 0.70664063],nhidden 256,nembed 32,layer 1,dataset texas,sub_dataset fb100,run 5,epochs 2000,heads 5,m 5,miniid 1,lr 0.001
+0.626 ± 0.082   [0.48740234 0.5875     0.65898437 0.67529297 0.72236328],nhidden 512,nembed 32,layer 1,dataset texas,sub_dataset fb100,run 5,epochs 2000,heads 5,m 5,miniid 1,lr 0.001
+0.535 ± 0.036   [0.5        0.56855469 0.5859375  0.52255859 0.5       ],nhidden 1024,nembed 32,layer 1,dataset texas,sub_dataset fb100,run 5,epochs 2000,heads 5,m 5,miniid 1,lr 0.001
+0.678 ± 0.031   [0.65351563 0.69589844 0.71386719 0.63144531 0.69589844],nhidden 128,nembed 32,layer 1,dataset texas,sub_dataset fb100,run 5,epochs 2000,heads 5,m 5,miniid 1,lr 0.001
+0.685 ± 0.054   [0.69511719 0.68505859 0.59365234 0.75351563 0.71708984 0.63320312
+ 0.62402344 0.65283203 0.73417969 0.76015625],nhidden 256,nembed 32,layer 1,dataset texas,sub_dataset fb100,run 10,epochs 2000,heads 5,m 5,miniid 1,lr 0.001
