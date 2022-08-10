@@ -1,30 +1,23 @@
-from torch_geometric.nn import GCNConv, ARGVA, ARGA
-from autoencoder import GAE, VGAE
-import torch
-import torch.nn.functional as F
-from sklearn.metrics import roc_auc_score
-from sklearn.metrics import average_precision_score
-import random
-from re import A
+import os
+import sys
+sys.path.insert(1, os.path.join(sys.path[0], '..'))
+
+from autoencoder import GAE
 from dataset import WikipediaNetwork
-import argparse
-import torch
-from torch_geometric.nn import VGAE, GCNConv
-from torch_geometric.datasets import Planetoid, WebKB
-import torch.nn.functional as F
-import torch_geometric.transforms as T
-from torch.optim import Adam
-from sklearn.decomposition import PCA
-from torch_geometric.utils import to_dense_adj,structured_negative_sampling
-from sklearn.cluster import KMeans
-from sklearn.metrics import roc_auc_score, average_precision_score
 from other_hetero_datasets import load_nc_dataset
+from factorgcn import FactorGNNSBMs
+
+import argparse
+import dgl
+import torch
+from torch_geometric.datasets import Planetoid, WebKB
+from torch_geometric.utils import structured_negative_sampling
+from sklearn.metrics import roc_auc_score, average_precision_score
+from sklearn.model_selection import train_test_split
 import numpy as np
 import scipy.sparse as sp
 from copy import deepcopy
-from sklearn.model_selection import train_test_split
-from factorgcn import FactorGNN, FactorGNNSBMs
-import dgl
+
 # Training settings
 parser = argparse.ArgumentParser()
 parser.add_argument('--debug', action='store_true',
@@ -32,7 +25,7 @@ parser.add_argument('--debug', action='store_true',
 parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='Disables CUDA training.')
 parser.add_argument('--seed', type=int, default=18, help='Random seed.')
-parser.add_argument('--lr', type=float, default=0.01,
+parser.add_argument('--lr', type=float, default=0.005,
                     help='Initial learning rate.')
 parser.add_argument('--beta', type=float, default=0.85)
 parser.add_argument('--nfactor', type=int, default=5)
@@ -47,12 +40,13 @@ parser.add_argument('--nembed', type=int, default=32,
 parser.add_argument('--epochs', type=int,  default=1000, help='Number of epochs to train.')
 parser.add_argument("--layer", type=int, default=1)
 parser.add_argument("--temperature", type=int, default=1)
-parser.add_argument('--dataset', type=str, default='Cora', help='Random seed.')
+parser.add_argument('--dataset', type=str, default='cora', help='Random seed.')
 parser.add_argument('--sub_dataset', type=str, default='Reed98', help='Random seed.')
 parser.add_argument('--loss_weight', type=int, default=20)
 parser.add_argument('--run', type = int, default = 5)
 parser.add_argument('--gpu', type = int, default = 7)
 parser.add_argument('--m', type = int, default = 5)
+parser.add_argument("--miniid", type=int, default=0)
 
 args = parser.parse_known_args()[0]
 args.cuda = not args.no_cuda and torch.cuda.is_available()
@@ -60,20 +54,6 @@ device = torch.device("cuda:{}".format(args.gpu) if args.cuda else "cpu")
 if args.cuda:
     torch.cuda.manual_seed(args.seed)
 print(args)
-transform = T.Compose([T.NormalizeFeatures()])
-class VariationalGCNEncoder(torch.nn.Module):
-    def __init__(self, in_channels, out_channels):
-        super(VariationalGCNEncoder, self).__init__()
-        hidden_channels = 256
-        self.conv1 = GCNConv(in_channels, hidden_channels, cached=True)
-        self.conv_mu = GCNConv(hidden_channels, out_channels, cached=True)
-        self.conv_logstd = GCNConv(hidden_channels, out_channels, cached=True)
-
-    def forward(self, x, edge_index):
-        x = self.conv1(x, edge_index).relu()
-        return self.conv_mu(x, edge_index), self.conv_logstd(x, edge_index)
-
-
 
 def compute_scores(z, test_pos, test_neg):
     test = torch.cat((test_pos, test_neg), dim=1)
@@ -103,18 +83,20 @@ def get_g(edge_index,x):
         g = dgl.to_bidirected(g)
         feat = normalize_features(x)
         feat = torch.FloatTensor(feat)
+        if g.num_nodes != feat.shape[0]:
+            g.add_nodes(feat.shape[0]-g.num_nodes())
         return g ,feat
+
+
 if args.dataset in ['deezer-europe','ogbn-proteins','arxiv-year','yelp-chi']:
     data=load_nc_dataset(args.dataset).graph
 # "DE", "ENGB", "ES", "FR", "PTBR", "RU", "TW"
 # 'Penn94', 'Amherst41', 'Cornell5', 'Johns Hopkins55', 'Reed98'
 if args.dataset in ['twitch-e','fb100']:
     data=load_nc_dataset(args.dataset,args.sub_dataset).graph
-
 if args.dataset in ["Texas", "Wisconsin","Cornell"]:
     dataset = WebKB(root='data/',name=args.dataset)
     data = dataset[0].to(device)
-
 if args.dataset in ["crocodile", "squirrel",'chameleon']:
     if args.dataset=="crocodile":
         dataset = WikipediaNetwork('data/',name=args.dataset,geom_gcn_preprocess=False)
@@ -123,15 +105,15 @@ if args.dataset in ["crocodile", "squirrel",'chameleon']:
         dataset1 = WikipediaNetwork('data_pre_false/', name=args.dataset, geom_gcn_preprocess=False)
         data1 = dataset1[0].to(device)
     data = dataset[0].to(device)
-#nfeat=data.x.shape[1]
 if args.dataset in ["squirrel",'chameleon']:
     nfeat = args.nfeat
     x = data1.x
     x=(x-torch.mul(torch.ones(x.shape).to(device),torch.mean(x,dim=1).unsqueeze(dim=1)))/torch.std(x,dim=1).unsqueeze(dim=1)
     edge_index=data1.edge_index
-if args.dataset in ['crocodile']:
+if args.dataset in ['crocodile', 'Wisconsin', 'Texas', 'Cornell']:
     nfeat=data.x.shape[1]
     x=data.x
+    x=(x-torch.mul(torch.ones(x.shape).to(device),torch.mean(x,dim=1).unsqueeze(dim=1)))/torch.std(x,dim=1).unsqueeze(dim=1)
     edge_index = data.edge_index
 if args.dataset in ['twitch-e','fb100','deezer-europe','ogbn-proteins','arxiv-year']:
     nfeat = data['node_feat'].shape[1]
@@ -148,10 +130,16 @@ if args.dataset in ['cora', 'citeseer', 'pubmed']:
     nfeat=x.shape[1]
     edge_index = data.edge_index
     print(edge_index)
+if args.dataset in ['year']:
+    data=torch.load('mini/year{}.pt'.format(args.miniid)).to(device)
+    x=data.x
+    x=(x-torch.mul(torch.ones(x.shape).to(device),torch.mean(x,dim=1).unsqueeze(dim=1)))/torch.std(x,dim=1).unsqueeze(dim=1)
+    nfeat=x.shape[1]
+    edge_index = data.edge_index 
 result = []
 for run in range(args.run):
     print("run:",run)
-
+    
     #85/5/10 split training data
     link_train,link_test_val=train_test_split(range(0, edge_index.shape[1]),train_size=0.85)
     link_test,link_val=train_test_split(link_test_val,train_size=2/3)
@@ -224,13 +212,12 @@ for run in range(args.run):
     z = model.encode(x1)
     test_auc,_=compute_scores(z,pos_test,neg_test)
     result.append(test_auc)
-import numpy as np
+
 result = np.array(result)
 if args.dataset in ['twitch-e','fb100']:
-    #filename = f'performance/{args.dataset}_{args.sub_dataset}_vgae.csv'
-    filename = f'performance/{args.dataset}_factorgcn.csv'
+    filename = f'../performance/{args.dataset}_{args.sub_dataset}_factorgcn.csv'
 else:
-    filename = f'performance/{args.dataset}_factorgcn.csv'
+    filename = f'../performance/{args.dataset}_factorgcn.csv'
 print(f"Saving results to {filename}")
 with open(f"{filename}", 'a+') as write_obj:
     sub_dataset = f'{args.sub_dataset},' if args.sub_dataset else ''

@@ -21,7 +21,7 @@ dataset texas,sub_dataset Amherst41,fea_homo 0.4194267690181732
 dataset cora,sub_dataset Amherst41,fea_homo 0.756683349609375
 dataset citeseer,sub_dataset Amherst41,fea_homo 0.7362684607505798
 dataset photo,sub_dataset Amherst41,fea_homo 0.41619473695755005
-
+#fea_homo1
 dataset chameleon,sub_dataset as,fea_homo 0.013566910289227962
 dataset squirrel,sub_dataset as,fea_homo 0.015139458701014519
 dataset crocodile,sub_dataset as,fea_homo 0.16921013593673706
@@ -35,7 +35,7 @@ dataset cora,sub_dataset as,fea_homo 0.16823440790176392
 dataset citeseer,sub_dataset as,fea_homo 0.189803808927536
 dataset photo,sub_dataset as,fea_homo 0.4978201985359192
 
-
+#devide fea_homo2
 dataset chameleon,sub_dataset as,fea_homo 0.5510367751121521
 dataset squirrel,sub_dataset as,fea_homo 0.6988497376441956
 dataset crocodile,sub_dataset as,fea_homo 0.7394224405288696
@@ -49,7 +49,7 @@ dataset cora,sub_dataset as,fea_homo 0.7561545372009277
 dataset citeseer,sub_dataset as,fea_homo 0.7621850967407227
 dataset photo,sub_dataset as,fea_homo 1.1720399856567383
 
-
+#all fea_homo
 dataset chameleon,sub_dataset as,fea_homo 0.01647486351430416
 dataset squirrel,sub_dataset as,fea_homo 0.0161008071154356
 dataset crocodile,sub_dataset as,fea_homo 0.17777422070503235
@@ -62,3 +62,17 @@ dataset fb100,sub_dataset JohnsHopkins55,fea_homo 0.32045724987983704
 dataset cora,sub_dataset as,fea_homo 0.1676546037197113
 dataset citeseer,sub_dataset as,fea_homo 0.1906338781118393
 dataset photo,sub_dataset as,fea_homo 0.48760637640953064
+
+
+dataset chameleon,sub_dataset as,fea_homo 0.05260961875319481
+dataset squirrel,sub_dataset as,fea_homo 0.08045262098312378
+dataset crocodile,sub_dataset as,fea_homo 0.36832520365715027
+dataset texas,sub_dataset as,fea_homo 0.25717347860336304
+dataset wisconsin,sub_dataset as,fea_homo 0.2829879820346832
+dataset twitch-e,sub_dataset DE,fea_homo 0.38337385654449463
+dataset twitch-e,sub_dataset ENGB,fea_homo 0.31998276710510254
+dataset fb100,sub_dataset Amherst41,fea_homo 0.6175726652145386
+dataset fb100,sub_dataset JohnsHopkins55,fea_homo 0.5934613347053528
+dataset cora,sub_dataset as,fea_homo 0.2641185522079468
+dataset citeseer,sub_dataset as,fea_homo 0.2600213587284088
+dataset photo,sub_dataset as,fea_homo 0.5938777327537537

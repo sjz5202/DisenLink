@@ -1,34 +1,27 @@
-from torch_geometric.nn import GCNConv, ARGVA, ARGA,GATConv
-import torch
-import torch.nn.functional as F
-from sklearn.metrics import roc_auc_score
-from sklearn.metrics import average_precision_score
-import random
-from re import A
+import os
+import sys
+sys.path.insert(1, os.path.join(sys.path[0], '..'))
+
+from autoencoder import GAE
 from dataset import WikipediaNetwork
+from other_hetero_datasets import load_nc_dataset
+from factorgcn import FactorGNNSBMs
+
 import argparse
 import torch
-from torch_geometric.nn import VGAE, GCNConv
-from torch_geometric.datasets import Planetoid, WebKB
+from torch.nn import Parameter, Linear
 import torch.nn.functional as F
-import torch_geometric.transforms as T
-from torch.optim import Adam
-from sklearn.decomposition import PCA
-from torch_geometric.utils import to_dense_adj,structured_negative_sampling
-from sklearn.cluster import KMeans
+from torch_geometric.nn import VGAE
+from torch_geometric.nn.conv.gcn_conv import gcn_norm
+from torch_geometric.nn import MessagePassing, APPNP
+from torch_geometric.datasets import Planetoid, WebKB
+from torch_geometric.utils import structured_negative_sampling
 from sklearn.metrics import roc_auc_score, average_precision_score
-from other_hetero_datasets import load_nc_dataset
+from sklearn.model_selection import train_test_split
 import numpy as np
 import scipy.sparse as sp
 from copy import deepcopy
-from sklearn.model_selection import train_test_split
-import numpy as np
-from torch_geometric.nn.conv.gcn_conv import gcn_norm
-from torch.nn import Parameter
-from torch.nn import Linear
-from torch_geometric.nn import GATConv, GCNConv, ChebConv
-from torch_geometric.nn import JumpingKnowledge
-from torch_geometric.nn import MessagePassing, APPNP
+
 # Training settings
 parser = argparse.ArgumentParser()
 parser.add_argument('--debug', action='store_true',
@@ -45,17 +38,17 @@ parser.add_argument('--weight_decay', type=float, default=5e-4,
                     help='Weight decay (L2 loss on parameters).')
 parser.add_argument('--nfeat', type=int, default=128,
                     help='Number of feature units.')
-parser.add_argument('--nhidden', type=int, default=64,
+parser.add_argument('--nhidden', type=int, default=128,
                     help='Number of hidden units.')
-parser.add_argument('--nembed', type=int, default=32,
+parser.add_argument('--nembed', type=int, default=64,
                     help='Number of embedding units.')
-parser.add_argument('--epochs', type=int,  default=2000, help='Number of epochs to train.')
+parser.add_argument('--epochs', type=int,  default=200, help='Number of epochs to train.')
 parser.add_argument("--layer", type=int, default=1)
 parser.add_argument("--temperature", type=int, default=1)
-parser.add_argument('--dataset', type=str, default='chameleon', help='Random seed.')
+parser.add_argument('--dataset', type=str, default='cora', help='Random seed.')
 parser.add_argument('--sub_dataset', type=str, default='Reed98', help='Random seed.')
 parser.add_argument('--loss_weight', type=int, default=20)
-parser.add_argument('--run', type = int, default = 1)
+parser.add_argument('--run', type = int, default = 2)
 parser.add_argument('--gpu', type = int, default = 0)
 parser.add_argument('--m', type = int, default = 5)
 parser.add_argument('--head', type = int, default = 5)
@@ -66,7 +59,7 @@ device = torch.device("cuda:{}".format(args.gpu) if args.cuda else "cpu")
 if args.cuda:
     torch.cuda.manual_seed(args.seed)
 print(args)
-transform = T.Compose([T.NormalizeFeatures()])
+
 class GPR_prop(MessagePassing):
     '''
     propagation class for GPR_GNN
@@ -135,7 +128,7 @@ class GPRGNN(torch.nn.Module):
         self.lin2 = Linear(nhidden, nembed)
         self.lin3 = Linear(nhidden, nembed)
         self.prop_mu = GPR_prop(10, alpha, 'PPR', None)
-        self.prop_logstd = F(10, alpha, 'PPR', None)
+        self.prop_logstd = GPR_prop(10, alpha, 'PPR', None)
 
         self.Init = 'PPR'
 
@@ -148,17 +141,6 @@ class GPRGNN(torch.nn.Module):
         x1 = self.lin2(x)
         x2 = self.lin3(x)
         return self.prop_mu(x1, edge_index),self.prop_logstd(x2, edge_index)
-class VariationalGATEncoder(torch.nn.Module):
-    def __init__(self, in_channels, nhidden,out_channels,head):
-        super(VariationalGATEncoder, self).__init__()
-        hidden_channels = nhidden
-        self.conv1 = GATConv(in_channels, hidden_channels, heads=head,concat=True)
-        self.conv_mu = GATConv(head*hidden_channels, out_channels,heads=head,concat=True )
-        self.conv_logstd = GATConv(head*hidden_channels, out_channels, heads=head,concat=True )
-
-    def forward(self, x, edge_index):
-        x = self.conv1(x, edge_index).relu()
-        return self.conv_mu(x, edge_index), self.conv_logstd(x, edge_index)
 
 
 def compute_scores(z, test_pos, test_neg):
@@ -198,7 +180,7 @@ if args.dataset in ["squirrel",'chameleon']:
     x = data1.x
     x=(x-torch.mul(torch.ones(x.shape).to(device),torch.mean(x,dim=1).unsqueeze(dim=1)))/torch.std(x,dim=1).unsqueeze(dim=1)
     edge_index=data1.edge_index
-if args.dataset in ['crocodile']:
+if args.dataset in ['crocodile', 'Cornell', 'Wisconsin', 'Texas']:
     nfeat=data.x.shape[1]
     x=data.x
     edge_index = data.edge_index
@@ -224,7 +206,7 @@ if args.dataset in ['year']:
 result = []
 for run in range(args.run):
     print("run:",run)
-
+    
     #85/5/10 split training data
     link_train,link_test_val=train_test_split(range(0, edge_index.shape[1]),train_size=0.85)
     link_test,link_val=train_test_split(link_test_val,train_size=2/3)
@@ -300,13 +282,13 @@ for run in range(args.run):
     z = model.encode(x, train_edge_list)
     test_auc,_=compute_scores(z,pos_test,neg_test)
     result.append(test_auc)
-import numpy as np
+
 result = np.array(result)
 if args.dataset in ['twitch-e','fb100']:
-    #filename = f'performance/{args.dataset}_{args.sub_dataset}_gat.csv'
-    filename = f'performance/{args.dataset}_gprgnn.csv'
+    filename = f'../performance/{args.dataset}_{args.sub_dataset}_gprgnn.csv'
 else:
-    filename = f'performance/{args.dataset}_gprgnn.csv'
+    filename = f'../performance/{args.dataset}_gprgnn.csv'
+
 print(f"Saving results to {filename}")
 with open(f"{filename}", 'a+') as write_obj:
     sub_dataset = f'{args.sub_dataset},' if args.sub_dataset else ''

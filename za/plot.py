@@ -61,15 +61,16 @@ fig.savefig("figure1/nfactor_engb.pdf",bbox_inches='tight' , pad_inches=0.01)
 '''
 
 
-
+sns.set(font_scale=1.8)
 #data=torch.load('feature/chame_out_32_data.pt')
 data=torch.load('feature/feature_out_32_5_naive1.pt')
 df=pd.DataFrame(data.detach().cpu().numpy())
 cor=df.corr()
-plt.figure(figsize=(10,6))
+plt.figure(figsize=(10,8))
 corre=sns.heatmap(cor,cmap="YlGnBu")
 fig = corre.get_figure()
-fig.savefig("figure1/feature_corr_5fatcor_naive.pdf",bbox_inches='tight' , pad_inches=0.01)
+fig.savefig("figure/feature_corr_5fatcor_naive.pdf",bbox_inches='tight' , pad_inches=0.01)
+#fig.savefig("figure/feature_corr_5fatcor_data.pdf",bbox_inches='tight' , pad_inches=0.01)
 
 
 
