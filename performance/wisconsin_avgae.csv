@@ -1,5 +1,0 @@
-0.649 ± 0.019   [0.65551036 0.66734467 0.62315089],nhidden 256,nembed 32,layer 1,dataset wisconsin,sub_dataset Amherst41,run 3,epochs 2000,lr 0.001
-0.679 ± 0.054   [0.68676036 0.7401997  0.60946746],nhidden 512,nembed 32,layer 1,dataset wisconsin,sub_dataset Amherst41,run 3,epochs 2000,lr 0.001
-0.679 ± 0.038   [0.72300296 0.68398669 0.62980769],nhidden 1024,nembed 32,layer 1,dataset wisconsin,sub_dataset Amherst41,run 3,epochs 2000,lr 0.001
-0.676 ± 0.030   [0.64718935 0.67954882 0.69619083 0.65440089 0.65014793 0.6512574
- 0.70691568 0.64238166 0.69637574 0.73668639],nhidden 1024,nembed 32,layer 1,dataset wisconsin,sub_dataset Amherst41,run 10,epochs 2000,lr 0.001

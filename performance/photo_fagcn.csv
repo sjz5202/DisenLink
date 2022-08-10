@@ -1,1 +1,0 @@
-0.940 ± 0.019   [0.95187266 0.94860556 0.90300625 0.94771142 0.95041502],nhidden 128,nembed 32,layer 1,dataset photo,sub_dataset JohnsHopkins55,run 5,epochs 2000,heads 5,m 5,lr 0.001

@@ -1,3 +1,0 @@
-0.777 ± 0.005   nhidden 256,nembed 32,layer 1,dataset fb100,sub_dataset Amherst41,run 10,epochs 2000,lr 0.001
-0.812 ± 0.003   [0.81196836 0.81295983 0.81616452 0.8092738  0.80934135 0.81270229
- 0.81875612 0.80637796 0.81247239 0.8143289 ],nhidden 256,nembed 32,layer 1,dataset fb100,sub_dataset Amherst41,run 10,epochs 2000,lr 0.001

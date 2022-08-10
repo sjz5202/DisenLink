@@ -1,1 +1,0 @@
-0.946 ± 0.000   beta_GIC 100,nhidden 64,nembed 32,layer 1,dataset chameleon,sub_dataset Reed98,run 1,epochs 2000,lr 0.001,alpha 0.5,loss_weight 20 

@@ -1,4 +1,0 @@
-0.978 ± 0.001,[0.97600673 0.97739745 0.9787901  0.97770946 0.97778487],beta 0.5,temperature 1,nfactor 1,nhidden 512,nembed 32,layer 1,dataset squirrel,sub_dataset DE,run 5,epochs 2000,lr 0.0001,miniid 2,m 5
-0.981 ± 0.001,[0.98210258 0.98158988 0.98149904 0.98119899 0.98041726],beta 0.5,temperature 1,nfactor 2,nhidden 512,nembed 32,layer 1,dataset squirrel,sub_dataset DE,run 5,epochs 2000,lr 0.0001,miniid 2,m 5
-0.983 ± 0.000,[0.98230726 0.98281484 0.98306361 0.98258951 0.98309114],beta 0.5,temperature 1,nfactor 3,nhidden 512,nembed 32,layer 1,dataset squirrel,sub_dataset DE,run 5,epochs 2000,lr 0.0001,miniid 2,m 5
-0.983 ± 0.000,[0.98266228 0.98364034 0.98250867 0.9827063  0.98301816],beta 0.5,temperature 1,nfactor 4,nhidden 512,nembed 32,layer 1,dataset squirrel,sub_dataset DE,run 5,epochs 2000,lr 0.0001,miniid 2,m 5

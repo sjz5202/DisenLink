@@ -1,4 +1,0 @@
-0.949 ± 0.004,[0.94506016 0.95349514],beta 0.8,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 6,m 5
-0.947 ± 0.002,[0.94511971 0.94937861],beta 0.9,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 6,m 5
-0.929 ± 0.001,[0.92789677 0.93058895],beta 0.1,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 7,m 5
-0.943 ± 0.003,[0.94659252 0.94026844],beta 0.2,temperature 1,nfactor 5,nhidden 256,nembed 32,layer 1,dataset year,sub_dataset Amherst41,run 2,epochs 2000,lr 0.001,miniid 7,m 5

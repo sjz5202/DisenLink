@@ -1,1 +1,0 @@
-0.900 ± 0.016   [0.91244492 0.90645828 0.91044976 0.90305872 0.86875886],nhidden 128,nembed 32,layer 1,dataset twitch-e,sub_dataset TW,run 5,epochs 2000,heads 5,m 5,alpha 0.85,lr 0.001

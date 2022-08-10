@@ -1,3 +1,0 @@
-0.897 ± 0.023   [0.94047534 0.87741849 0.90273613 0.88500773 0.88078378],nhidden 128,nembed 32,layer 1,dataset photo,sub_dataset Reed98,run 5,epochs 2000,lr 0.001
-0.918 ± 0.013   [0.92361403 0.90100374 0.93661965 0.92510625 0.90419502],nhidden 128,nembed 32,layer 1,dataset photo,sub_dataset Reed98,run 5,epochs 2000,lr 0.001
-0.957 ± 0.005   [0.96249274 0.95055588 0.96085169 0.95130234 0.95733377],nhidden 128,nembed 32,layer 1,dataset photo,sub_dataset Reed98,run 5,epochs 2000,lr 0.001
