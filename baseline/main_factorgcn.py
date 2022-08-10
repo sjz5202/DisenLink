@@ -44,7 +44,7 @@ parser.add_argument('--dataset', type=str, default='cora', help='Random seed.')
 parser.add_argument('--sub_dataset', type=str, default='Reed98', help='Random seed.')
 parser.add_argument('--loss_weight', type=int, default=20)
 parser.add_argument('--run', type = int, default = 5)
-parser.add_argument('--gpu', type = int, default = 7)
+parser.add_argument('--gpu', type = int, default = 1)
 parser.add_argument('--m', type = int, default = 5)
 parser.add_argument("--miniid", type=int, default=0)
 
