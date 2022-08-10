@@ -26,8 +26,8 @@ parser.add_argument('--no-cuda', action='store_true', default=False,
 parser.add_argument('--seed', type=int, default=18, help='Random seed.')
 parser.add_argument('--lr', type=float, default=0.0001,
                     help='Initial learning rate.')
-parser.add_argument('--beta', type=float, default=0.2)
-parser.add_argument('--nfactor', type=int, default=15)
+parser.add_argument('--beta', type=float, default=0.9)
+parser.add_argument('--nfactor', type=int, default=3)
 parser.add_argument('--weight_decay', type=float, default=5e-4,
                     help='Weight decay (L2 loss on parameters).')
 parser.add_argument('--nfeat', type=int, default=128,
@@ -42,7 +42,7 @@ parser.add_argument('--dataset', type=str, default='chameleon', help='Random see
 parser.add_argument('--sub_dataset', type=str, default='Amherst41', help='Random seed.')
 parser.add_argument('--run', type = int, default = 1)
 parser.add_argument('--gpu', type = int, default = 0)
-parser.add_argument('--m', type = int, default = 5,help='number of factors')
+parser.add_argument('--m', type = int, default = 5,help='ratio of negative sample')
 parser.add_argument('--save', type = int, default = 0)
 parser.add_argument('--loss_weight', type=int, default=20)
 parser.add_argument("--layer", type=int, default=1)

@@ -1,4 +1,4 @@
-from torch_geometric.nn import GCNConv, ARGVA, ARGA,GATConv
+from torch_geometric.nn import GCNConv, ARGVA, ARGA
 import torch
 import torch.nn.functional as F
 from sklearn.metrics import roc_auc_score
@@ -15,7 +15,6 @@ import torch_geometric.transforms as T
 from torch.optim import Adam
 from sklearn.decomposition import PCA
 from torch_geometric.utils import to_dense_adj,structured_negative_sampling
-from torch_sparse import SparseTensor, matmul
 from sklearn.cluster import KMeans
 from sklearn.metrics import roc_auc_score, average_precision_score
 from other_hetero_datasets import load_nc_dataset
@@ -23,15 +22,6 @@ import numpy as np
 import scipy.sparse as sp
 from copy import deepcopy
 from sklearn.model_selection import train_test_split
-import torch.nn as nn
-import numpy as np
-from torch_geometric.nn.conv.gcn_conv import gcn_norm
-from torch.nn import Parameter
-from torch.nn import Linear
-from torch_geometric.nn import GATConv, GCNConv, ChebConv
-from torch_geometric.nn import JumpingKnowledge
-from torch_geometric.nn import MessagePassing, APPNP
-
 # Training settings
 parser = argparse.ArgumentParser()
 parser.add_argument('--debug', action='store_true',
@@ -39,29 +29,27 @@ parser.add_argument('--debug', action='store_true',
 parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='Disables CUDA training.')
 parser.add_argument('--seed', type=int, default=18, help='Random seed.')
-parser.add_argument('--lr', type=float, default=0.001,
+parser.add_argument('--lr', type=float, default=0.01,
                     help='Initial learning rate.')
-parser.add_argument('--beta', type=float, default=0.2)
-parser.add_argument('--alpha', type=float, default=0.85)
+parser.add_argument('--beta', type=float, default=0.85)
 parser.add_argument('--nfactor', type=int, default=5)
 parser.add_argument('--weight_decay', type=float, default=5e-4,
                     help='Weight decay (L2 loss on parameters).')
 parser.add_argument('--nfeat', type=int, default=128,
                     help='Number of feature units.')
-parser.add_argument('--nhidden', type=int, default=128,
+parser.add_argument('--nhidden', type=int, default=512,
                     help='Number of hidden units.')
 parser.add_argument('--nembed', type=int, default=32,
                     help='Number of embedding units.')
 parser.add_argument('--epochs', type=int,  default=2000, help='Number of epochs to train.')
 parser.add_argument("--layer", type=int, default=1)
 parser.add_argument("--temperature", type=int, default=1)
-parser.add_argument('--dataset', type=str, default='twitch-e', help='Random seed.')
-parser.add_argument('--sub_dataset', type=str, default='TW', help='Random seed.')
+parser.add_argument('--dataset', type=str, default='chameleon', help='Random seed.')
+parser.add_argument('--sub_dataset', type=str, default='RU', help='Random seed.')
 parser.add_argument('--loss_weight', type=int, default=20)
-parser.add_argument('--run', type = int, default = 5)
-parser.add_argument('--gpu', type = int, default = 0)
+parser.add_argument('--run', type = int, default = 1)
+parser.add_argument('--gpu', type = int, default = 5)
 parser.add_argument('--m', type = int, default = 5)
-parser.add_argument('--head', type = int, default = 5)
 parser.add_argument("--miniid", type=int, default=0)
 args = parser.parse_known_args()[0]
 args.cuda = not args.no_cuda and torch.cuda.is_available()
@@ -70,105 +58,33 @@ if args.cuda:
     torch.cuda.manual_seed(args.seed)
 print(args)
 transform = T.Compose([T.NormalizeFeatures()])
-class LINKX(nn.Module):
-    """ our LINKX method with skip connections 
-        a = MLP_1(A), x = MLP_2(X), MLP_3(sigma(W_1[a, x] + a + x))
-    """
 
-    def __init__(self, in_channels, hidden_channels, out_channels, num_layers, num_nodes, dropout=.5, cache=False, inner_activation=False, inner_dropout=False, init_layers_A=1, init_layers_X=1):
-        super(LINKX, self).__init__()
-        self.mlpA = MLP(num_nodes, hidden_channels, hidden_channels, init_layers_A, dropout=0)
-        self.mlpX = MLP(in_channels, hidden_channels, hidden_channels, init_layers_X, dropout=0)
-        self.W = nn.Linear(2*hidden_channels, hidden_channels)
-        self.mlp_final = MLP(hidden_channels, hidden_channels, out_channels, num_layers, dropout=dropout)
-        self.mlp_final1 = MLP(hidden_channels, hidden_channels, out_channels, num_layers, dropout=dropout)
-        self.in_channels = in_channels
-        self.num_nodes = num_nodes
-        self.A = None
-        self.inner_activation = inner_activation
-        self.inner_dropout = inner_dropout
-
-    def reset_parameters(self):
-        self.mlpA.reset_parameters()
-        self.mlpX.reset_parameters()
-        self.W.reset_parameters()
-        self.mlp_final.reset_parameters()
-        self.mlp_final1.reset_parameters()
-
-    def forward(self,x,row,col):
-        #m = data.graph['num_nodes']
-        #feat_dim = data.graph['node_feat']
-        #row, col = data.graph['edge_index']
-        row = row-row.min()
-        A = SparseTensor(row=row, col=col,
-                 sparse_sizes=(self.num_nodes, self.num_nodes)
-                        ).to_torch_sparse_coo_tensor()
-
-        xA = self.mlpA(A, input_tensor=True)
-        xX = self.mlpX(x, input_tensor=True)
-        x = torch.cat((xA, xX), axis=-1)
-        x = self.W(x)
-        if self.inner_dropout:
-            x = F.dropout(x)
-        if self.inner_activation:
-            x = F.relu(x)
-        x = F.relu(x + xA + xX)
-        x1 = self.mlp_final(x, input_tensor=True)
-        x2 = self.mlp_final1(x, input_tensor=True)
-
-        return x1,x2
-
-class MLP(nn.Module):
-    """ adapted from https://github.com/CUAI/CorrectAndSmooth/blob/master/gen_models.py """
-    def __init__(self, in_channels, hidden_channels, out_channels, num_layers,
-                 dropout=.5):
-        super(MLP, self).__init__()
-        self.lins = nn.ModuleList()
-        self.bns = nn.ModuleList()
-        if num_layers == 1:
-            # just linear layer i.e. logistic regression
-            self.lins.append(nn.Linear(in_channels, out_channels))
-        else:
-            self.lins.append(nn.Linear(in_channels, hidden_channels))
-            self.bns.append(nn.BatchNorm1d(hidden_channels))
-            for _ in range(num_layers - 2):
-                self.lins.append(nn.Linear(hidden_channels, hidden_channels))
-                self.bns.append(nn.BatchNorm1d(hidden_channels))
-            self.lins.append(nn.Linear(hidden_channels, out_channels))
-
-        self.dropout = dropout
-
-    def reset_parameters(self):
-        for lin in self.lins:
-            lin.reset_parameters()
-        for bn in self.bns:
-            bn.reset_parameters()
-
-    def forward(self, data, input_tensor=False):
-        if not input_tensor:
-            x = data.graph['node_feat']
-        else:
-            x = data
-        for i, lin in enumerate(self.lins[:-1]):
-            x = lin(x)
-            x = F.relu(x, inplace=True)
-            x = self.bns[i](x)
-            x = F.dropout(x, p=self.dropout, training=self.training)
-        x = self.lins[-1](x)
+class mlp(torch.nn.Module):
+    def __init__(self, nfeat,nmid, nhid):
+        super(mlp, self).__init__()
+        self.nfeat=nfeat
+        self.nhid=nhid
+        self.nmid = nmid
+        self.mlp1 = torch.nn.Linear(nfeat, nmid)
+        self.mlp2 =torch.nn.Linear(nmid, nhid)
+    def forward(self,x):
+        x=F.relu(self.mlp1(x))
+        x=self.mlp2(x)
         return x
 
-class VariationalGATEncoder(torch.nn.Module):
-    def __init__(self, in_channels, nhidden,out_channels,head):
-        super(VariationalGATEncoder, self).__init__()
-        hidden_channels = nhidden
-        self.conv1 = GATConv(in_channels, hidden_channels, heads=head,concat=True)
-        self.conv_mu = GATConv(head*hidden_channels, out_channels,heads=head,concat=True )
-        self.conv_logstd = GATConv(head*hidden_channels, out_channels, heads=head,concat=True )
+class Variational_mlp(torch.nn.Module):
+    def __init__(self, nfeat,nmid, nhid):
+        super(Variational_mlp, self).__init__()
+        self.nfeat=nfeat
+        self.nhid=nhid
+        self.nmid = nmid
+        self.mlp1 = torch.nn.Linear(nfeat, nmid)
+        self.mlp2_1 =torch.nn.Linear(nmid, nhid)
+        self.mlp2_2 =torch.nn.Linear(nmid, nhid)
 
-    def forward(self, x, edge_index):
-        x = self.conv1(x, edge_index).relu()
-        return self.conv_mu(x, edge_index), self.conv_logstd(x, edge_index)
-
+    def forward(self, x):
+        x = self.mlp1(x).relu()
+        return self.mlp2_1(x), self.mlp2_2(x)
 
 def compute_scores(z, test_pos, test_neg):
     test = torch.cat((test_pos, test_neg), dim=1)
@@ -188,7 +104,9 @@ if args.dataset in ['deezer-europe','ogbn-proteins','arxiv-year','yelp-chi']:
 # 'Penn94', 'Amherst41', 'Cornell5', 'Johns Hopkins55', 'Reed98'
 if args.dataset in ['twitch-e','fb100']:
     data=load_nc_dataset(args.dataset,args.sub_dataset).graph
-
+if args.dataset in ['photo']:
+    dataset=Amazon(root='data/',name=args.dataset)
+    data = dataset[0].to(device)
 if args.dataset in ["texas", "wisconsin","cornell"]:
     dataset = WebKB(root='data/',name=args.dataset)
     data = dataset[0].to(device)
@@ -204,16 +122,6 @@ if args.dataset in ["crocodile", "squirrel",'chameleon']:
         data1 = dataset1[0].to(device)
     data = dataset[0].to(device)
 #nfeat=data.x.shape[1]
-if args.dataset in ['squirrel','chameleon']:
-    nfeat = args.nfeat
-    x = data1.x
-    x=(x-torch.mul(torch.ones(x.shape).to(device),torch.mean(x,dim=1).unsqueeze(dim=1)))/torch.std(x,dim=1).unsqueeze(dim=1)
-    edge_index=data1.edge_index
-if args.dataset in ['crocodile']:
-    nfeat=data.x.shape[1]
-    x=data.x
-    x = (x - torch.mul(torch.ones(x.shape).to(device), torch.mean(x, dim=1).unsqueeze(dim=1))) / torch.std(x,dim=1).unsqueeze(dim=1)
-    edge_index = data.edge_index
 if args.dataset in ['photo']:
     nfeat=data.x.shape[1]
     x = data.x
@@ -225,10 +133,18 @@ if args.dataset in ["texas", "wisconsin","cornell"]:
     x = data.x
     #x = (x - torch.mul(torch.ones(x.shape).to(device), torch.mean(x, dim=1).unsqueeze(dim=1))) / torch.std(x,dim=1).unsqueeze(dim=1)
     edge_index = data.edge_index
+if args.dataset in ["squirrel",'chameleon']:
+    nfeat=data.x.shape[1]
+    x = data.x
+    edge_index=data1.edge_index
+if args.dataset in ['crocodile']:
+    nfeat=data.x.shape[1]
+    x=data.x
+    edge_index = data.edge_index
 if args.dataset in ['twitch-e','fb100','deezer-europe','ogbn-proteins','arxiv-year']:
     nfeat = data['node_feat'].shape[1]
     x=data['node_feat'].to(device)
-    #x = (x - torch.mul(torch.ones(x.shape).to(device), torch.mean(x, dim=1).unsqueeze(dim=1))) / torch.std(x,dim=1).unsqueeze(dim=1)
+    #x=(x-torch.mul(torch.ones(x.shape).to(device),torch.mean(x,dim=1).unsqueeze(dim=1)))/torch.std(x,dim=1).unsqueeze(dim=1)
     edge_index = data['edge_index'].to(device)
     if args.dataset in ['twitch-e']:
         e1=torch.stack((edge_index[1],edge_index[0])).to(device)
@@ -239,13 +155,16 @@ if args.dataset in ['cora', 'citeseer', 'pubmed']:
     x=data.x
     nfeat=x.shape[1]
     edge_index = data.edge_index
+    print(edge_index)
 if args.dataset in ['year']:
     data=torch.load('mini/year{}.pt'.format(args.miniid)).to(device)
     x=data.x
-    x=(x-torch.mul(torch.ones(x.shape).to(device),torch.mean(x,dim=1).unsqueeze(dim=1)))/torch.std(x,dim=1).unsqueeze(dim=1)
+    #x=(x-torch.mul(torch.ones(x.shape).to(device),torch.mean(x,dim=1).unsqueeze(dim=1)))/torch.std(x,dim=1).unsqueeze(dim=1)
     nfeat=x.shape[1]
     edge_index = data.edge_index 
+print(data)
 result = []
+m=0
 for run in range(args.run):
     print("run:",run)
 
@@ -264,8 +183,8 @@ for run in range(args.run):
     a_up=torch.triu(torch.ones(x.shape[0],x.shape[0]),diagonal=0).to(device)
     aup=adj_sym
     
-    model = VGAE(LINKX(nfeat,args.nhidden,args.nembed,1,x.shape[0])).to(device)
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.005)
+    model = VGAE(Variational_mlp(nfeat, args.nhidden,args.nembed)).to(device)
+    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
     best_auc=0
     #negative sampling for each connected node
     pos_val =torch.stack((edge_index[0][link_val], edge_index[1][link_val]))
@@ -297,16 +216,15 @@ for run in range(args.run):
                                             torch.Size([x.shape[0], x.shape[0]])).to_dense()
     all_train_adj[all_train_adj != 0] = 1
     all_test_adj[all_test_adj != 0] = 1
-    m=0
     for epoch in range(args.epochs):
         model.train()
         optimizer.zero_grad()
-        z = model.encode(x,train_edge_list[0],train_edge_list[1])
+        z = model.encode(x)
         loss=0
         for m_index in range(args.m):
             loss += model.recon_loss(z, train_edge_list,neg_tra[m_index])
-        #loss = loss/args.m + (1 / x.shape[0]) * model.kl_loss()
-        loss = loss / args.m
+        loss = loss/args.m + (1 / x.shape[0]) * model.kl_loss()
+        #loss = loss/args.m
         loss.backward()
         optimizer.step()
 
@@ -322,28 +240,27 @@ for run in range(args.run):
             break
         print("epoch:",epoch,"loss:",loss.item(),"val_auc:",best_auc)
     model.load_state_dict(weights)
-    z = model.encode(x, train_edge_list[0],train_edge_list[1])
+    z = model.encode(x)
     test_auc,_=compute_scores(z,pos_test,neg_test)
     result.append(test_auc)
 import numpy as np
 result = np.array(result)
-if args.dataset in ['twitch-e','fb100']:
-    #filename = f'performance/{args.dataset}_{args.sub_dataset}_gat.csv'
-    filename = f'performance/{args.dataset}_linkx.csv'
-else:
-    filename = f'performance/{args.dataset}_linkx.csv'
-print(f"Saving results to {filename}")
-with open(f"{filename}", 'a+') as write_obj:
-    sub_dataset = f'{args.sub_dataset},' if args.sub_dataset else ''
-    write_obj.write(f"{result.mean():.3f} ± {result.std():.3f}   "+f"{result},"
-                    f"nhidden " + f"{args.nhidden}," +
-                    f"nembed " + f"{args.nembed}," +
-                    f"layer " + f"{args.layer}," +
-                    f"dataset " + f"{args.dataset}," +
-                    f"sub_dataset " + f"{args.sub_dataset}," +
-                    f"run " + f"{args.run}," +
-                    f"epochs " + f"{args.epochs}," +
-                    f"heads " + f"{args.head}," +
-                    f"m " + f"{args.m}," +
-                    f"alpha " + f"{args.alpha}," +
-                    f"lr " + f"{args.lr}\n")
+print('final',result.mean(),result.std())
+if(1):
+    if args.dataset in ['twitch-e','fb100']:
+        filename = f'performance/mlp/{args.dataset}_{args.sub_dataset}_mlp.csv'
+        #filename = f'performance/{args.dataset}_mlp1.csv'
+    else:
+        filename = f'performance/mlp/{args.dataset}_mlp.csv'
+    print(f"Saving results to {filename}")
+    with open(f"{filename}", 'a+') as write_obj:
+        sub_dataset = f'{args.sub_dataset},' if args.sub_dataset else ''
+        write_obj.write(f"{result.mean():.3f} ± {result.std():.3f}   "+f"{result},"+
+                        f"nhidden " + f"{args.nhidden}," +
+                        f"nembed " + f"{args.nembed}," +
+                        f"layer " + f"{args.layer}," +
+                        f"dataset " + f"{args.dataset}," +
+                        f"sub_dataset " + f"{args.sub_dataset}," +
+                        f"run " + f"{args.run}," +
+                        f"epochs " + f"{args.epochs}," +
+                        f"lr " + f"{args.lr}\n")
