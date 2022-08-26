@@ -1,0 +1,17 @@
+#Due to the consideration of computing resources and time consuming, most nembed and nfactor are now setted as 32 and 5. Performance could be even better by increasing them and lightly tuning.
+python -u main_disentangled.py --dataset chameleon --beta 0.7 temperature 1 --nfactor 5 --nhidden 512 --nembed 32 --layer 1 --epochs 2000 --lr 0.0001 --m 5 --run 10
+python -u main_disentangled.py --dataset squirrel --beta 0.5 --temperature 1 --nfactor 5 --nhidden 512 --nembed 64 --layer 1 --epochs 2000 --lr 0.0001 --m 5 --run 10
+python -u main_disentangled.py --dataset crocodile --beta 0.8 --temperature 1 --nfactor 5 --nhidden 512 --nembed 32 --layer 1 --epochs 2000 --lr 0.0001 --m 5 --run 10
+python -u main_disentangled.py --dataset texas --beta 0.6 --temperature 1 --nfactor 5 --nhidden 512 --nembed 32 --layer 1 --epochs 2000 --lr 0.0001 --m 5 --run 10
+python -u main_disentangled.py --dataset wisconsin --beta 0.9 --temperature 1 --nfactor 10 --nhidden 256 --nembed 32 --layer 1 --epochs 2000 --lr 0.00005 --m 5 --run 10
+python -u main_disentangled.py --dataset twitch-e --sub_dataset DE --beta 0.8 --temperature 1 --nfactor 5 --nhidden 256 --nembed 32 --layer 1 --epochs 2000 --lr 0.0001 --m 5 --run 10
+python -u main_disentangled.py --dataset twitch-e --sub_dataset ENGB --beta 0.8 --temperature 1 --nfactor 10 --nhidden 256 --nembed 32 --layer 1 --epochs 2000 --lr 0.0001 --m 5 --run 10
+python -u main_disentangled.py --dataset fb100 --sub_dataset Amherst41 --beta 0.5 --temperature 1 --nfactor 20 --nhidden 256 --nembed 32 --layer 1 --epochs 2000 --lr 0.0001 --m 5 --run 10
+python -u main_disentangled.py --dataset fb100 --sub_dataset JohnsHopkins55 --beta 0.8 --temperature 1 --nfactor 5 --nhidden 256 --nembed 32 --layer 1 --epochs 2000 --lr 0.001 --m 5 --run 10
+python -u main_disentangled.py --dataset cora --beta 0.6 --temperature 1 --nfactor 10 --nhidden 256 --nembed 64 --layer 1 --epochs 2000 --lr 0.001 --m 5 --run 10 
+python -u main_disentangled.py --dataset citeseer --beta 0.8 --temperature 1 --nfactor 10 --nhidden 256 --nembed 64 --layer 1 --epochs 2000 --lr 0.001 --m 5 --run 10 
+python -u main_disentangled.py --dataset photo --beta 0.8 --temperature 1 --nfactor 5 --nhidden 64 --nembed 32 --layer 1 --epochs 2000 --lr 0.001 --m 5 --run 10
+
+Arxiv-year (miniid 0-9):
+    Beta_list=[0.7 0.8 0.9 0.7 0.5 0.7 0.6 0.8 0.6 0.7]
+    nhidden 256,nembed 32,layer 1,run 10,epochs 2000,lr 0.001
