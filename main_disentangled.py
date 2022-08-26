@@ -40,7 +40,7 @@ parser.add_argument('--epochs', type=int,  default=2000, help='Number of epochs 
 parser.add_argument("--temperature", type=int, default=1)
 parser.add_argument('--dataset', type=str, default='chameleon', help='Random seed.')
 parser.add_argument('--sub_dataset', type=str, default='Amherst41', help='Random seed.')
-parser.add_argument('--run', type = int, default = 1)
+parser.add_argument('--run', type = int, default = 10)
 parser.add_argument('--gpu', type = int, default = 0)
 parser.add_argument('--m', type = int, default = 5,help='ratio of negative sample')
 parser.add_argument('--save', type = int, default = 0)
@@ -79,8 +79,8 @@ if args.dataset in ["crocodile", "squirrel",'chameleon']:
         data1 = dataset1[0].to(device)
     data = dataset[0].to(device)
     y=data.y
-    one_hot_y=F.one_hot(y, num_classes=5).to(torch.double)
-    homo=torch.mm(one_hot_y,one_hot_y.t())
+    #one_hot_y=F.one_hot(y, num_classes=5).to(torch.double)
+    #homo=torch.mm(one_hot_y,one_hot_y.t())
 #nfeat=data.x.shape[1]
 if args.dataset in ['photo']:
     nfeat=data.x.shape[1]
